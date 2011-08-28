@@ -15,6 +15,26 @@
   <%= @site.url %>
 </p>
 
+<p>
+  <b>Post XPath:</b>
+  <%= @site.post_xpath %>
+</p>
+
+<p>
+  <b>Title XPath:</b>
+  <%= @site.post_title_xpath %>
+</p>
+
+<p>
+  <b>Author XPath:</b>
+  <%= @site.post_author_xpath %>
+</p>
+
+<p>
+  <b>Body XPath:</b>
+  <%= @site.post_body_xpath %>
+</p>
+
 
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>

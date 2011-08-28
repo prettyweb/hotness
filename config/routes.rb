@@ -1,4 +1,8 @@
 Hotness::Application.routes.draw do
+  resources :posts
+
+  resources :topics
+
   resources :sites
 
   # The priority is based upon order of creation:

@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  site_id: 1
+  last_check_time: 2011-08-28 15:56:40
+  url: MyString
+
+two:
+  name: MyString
+  site_id: 1
+  last_check_time: 2011-08-28 15:56:40
+  url: MyString
+
+
+
+# == Schema Information
+#
+# Table name: topics
+#
+#  id              :integer         not null, primary key
+#  name            :string(255)
+#  site_id         :integer
+#  last_check_time :datetime
+#  url             :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
