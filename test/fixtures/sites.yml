@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  domain: MyString
+  url: MyString
+
+two:
+  name: MyString
+  domain: MyString
+  url: MyString
+
+# == Schema Information
+#
+# Table name: sites
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  domain     :string(255)
+#  url        :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
