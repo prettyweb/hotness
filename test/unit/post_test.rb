@@ -9,17 +9,19 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: posts
 #
-#  id         :integer         not null, primary key
-#  author     :string(255)
-#  topic_id   :integer
-#  url        :string(255)
-#  created_at :datetime
-#  updated_at :datetime
-#  title      :string(255)
-#  body       :string(255)
+#  id          :integer         not null, primary key
+#  author      :string(255)
+#  topic_id    :integer
+#  url         :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#  title       :string(255)
+#  body        :string(255)
+#  reply_count :integer
 #
 

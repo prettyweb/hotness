@@ -6,6 +6,7 @@
     <th>Topic</th>
 	<th>Title</th>
     <th>Url</th>
+	<th>Reply Count</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +18,7 @@
     <td><%= post.topic.name %>(<%= post.topic_id %>)</td>
     <td><%= post.title %></td>
     <td><%= post.url %></td>
+	<td><%= post.reply_count %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>

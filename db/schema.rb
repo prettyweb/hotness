@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110828095317) do
+ActiveRecord::Schema.define(:version => 20110828111429) do
 
   create_table "posts", :force => true do |t|
     t.string   "author"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20110828095317) do
     t.datetime "updated_at"
     t.string   "title"
     t.string   "body"
+    t.integer  "reply_count"
   end
 
   create_table "sites", :force => true do |t|
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20110828095317) do
     t.string   "post_body_xpath"
     t.string   "post_xpath"
     t.string   "post_author_xpath"
+    t.string   "post_reply_number_xpath"
   end
 
   create_table "topics", :force => true do |t|
