@@ -8,11 +8,30 @@ class Post < ActiveRecord::Base
     url = self.url
     
     doc = Nokogiri::HTML(open(url))
-    self.title = doc.xpath(self.topic.site.post_title_xpath).first.content
-    self.body = doc.xpath(self.topic.site.post_body_xpath).first.content
-    self.author = doc.xpath(self.topic.site.post_author_xpath).first.content
+    begin
+      self.title = doc.xpath(self.topic.site.post_title_xpath).first.content
+    rescue
+      print "Faile: " << self.url << ' - title failed'
+    end
     
-    self.reply_count = self.parse_reply_number(doc)
+    begin
+      self.body = doc.xpath(self.topic.site.post_body_xpath).first.content
+    rescue
+      print "Faile: " << self.url << ' - body failed'      
+    end
+    
+    begin      
+      self.author = doc.xpath(self.topic.site.post_author_xpath).first.content  
+    rescue
+      print "Faile: " << self.url << ' - author failed'
+    end
+    
+    begin
+      self.reply_count = self.parse_reply_number(doc)
+    rescue
+      print "Faile: " << self.url << ' - reply count failed'
+    end
+    
     self
   end
   

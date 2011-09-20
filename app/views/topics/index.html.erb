@@ -14,7 +14,7 @@
 <% @topics.each do |topic| %>
   <tr>
     <td><%= topic.name %></td>
-    <td><%= topic.site_id %></td>
+    <td><%= link_to topic.site.name, topic.site %></td>
     <td><%= topic.last_check_time %></td>
     <td><%= topic.url %></td>
     <td><%= link_to 'Show', topic %></td>

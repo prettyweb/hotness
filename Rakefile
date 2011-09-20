@@ -5,3 +5,10 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 Hotness::Application.load_tasks
+
+desc "scrape"
+task :scrape => :environment do
+  Site.all.each do |site|
+    site.scrape
+  end
+end

@@ -15,5 +15,12 @@
   <%= @topic.last_check_time %>
 </p>
 
+<p>
+	<b>Latest Post</b>
+	<% latest_post = @topic.latest_post %>
+	<%= link_to latest_post.title, latest_post %>
+	updated at <%= latest_post.updated_at.to_s %>
+</p>
+
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>

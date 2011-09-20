@@ -4,6 +4,12 @@ class Site < ActiveRecord::Base
   validates_presence_of :url, :on => :create, :message => "can't be blank"
   has_many :topics
 
+  def scrape
+    self.topics.each do |topic|
+      topic.updatePosts
+    end
+  end
+  
   # author = '//td[@class="postauthor"]/cite/a'
   # body = '//*[@class="t_msgfont"][1]'
   # post_xpath = '//table['id'][2]//tr//span['id'][1]/a'

@@ -20,6 +20,12 @@ class Topic < ActiveRecord::Base
       post.retrieveUpdates
       post.save
     end
+    self.last_check_time = Time.now()
+    self.save
+  end
+
+  def latest_post
+    Post.where(:topic_id => self.id).order('updated_at DESC').first
   end
 
 end

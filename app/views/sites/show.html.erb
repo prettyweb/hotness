@@ -41,5 +41,28 @@
   <%= @site.post_reply_number_xpath %>
 </p>
 
+<p>
+	<b>Topic Board List</b>
+	<table>
+		<tr>
+			<td>
+				Name
+			</td>
+			<td>
+				Post count
+			</td>
+		</tr>
+		<% @site.topics.each do |topic| %>
+			<tr>	
+				<td>
+					<%= link_to topic.name, topic %>
+				</td>
+				<td>
+					<%= topic.posts.count %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>
